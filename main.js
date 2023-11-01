@@ -8,8 +8,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const link = document.querySelector('#link');
 
     fetch('https://api.github.com/users/wildw0')  
-            .then(function(awnser) {
-                return awnser.json();
+            .then(function(answer) {
+                return answer.json();
             })
             .then(function(json) {
                 name.innerHTML = json.name;
@@ -21,10 +21,3 @@ document.addEventListener('DOMContentLoaded', function() {
                 link.href = json.html_url;
             })
     })
-    
-
-    // GET: utilizado para solicitar um dado do servidor;
-    // • POST: quando desejamos enviar dados para o servidor;
-    // • PUT: utilizado para alterar todos os dados de uma informação;
-    // • PATCH: utilizado para alterar parcialmente os dados de uma informação;
-    // • DELETE: utilizado para deletar um recurso.
